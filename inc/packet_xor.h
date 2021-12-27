@@ -53,7 +53,7 @@ public:
 
 public:
     bool encode(const uint8_t * src_data, uint32_t src_size, std::list<std::vector<uint8_t>> & dst_list);
-    bool encode(const uint8_t * src_data, uint32_t src_size, encode_callback_t * encode_callback, void * user_data);
+    bool encode(const uint8_t * src_data, uint32_t src_size, encode_callback_t encode_callback, void * user_data);
 
 public:
     void reset();
@@ -78,7 +78,7 @@ public:
 
 public:
     bool decode(const uint8_t * src_data, uint32_t src_size, std::list<std::vector<uint8_t>> & dst_list);
-    bool decode(const uint8_t * src_data, uint32_t src_size, decode_callback_t * decode_callback, void * user_data);
+    bool decode(const uint8_t * src_data, uint32_t src_size, decode_callback_t decode_callback, void * user_data);
 
 public:
     static bool recognizable(const uint8_t * src_data, uint32_t src_size);
